@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .position{
+            display: flex;
+            padding-top: 25px;
+            justify-content: center;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 1200px;
+            gap: 40px;
+            background-image: url("./img/фон.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: 0 0 15px 5px rgba(251, 0, 240, 0.7);
+
+        }
+
+        .h2Position{
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 0 15px 5px rgba(251, 0, 240, 0.7);
+            background: rgba(211, 44, 209, 0.4);
+        }
+
+        .h2Position>h2{
+
+            width: 600px;
+            text-align: center;
+            font-size: 60px;
+
+            box-shadow: 0 0 15px 5px rgba(251, 0, 240, 0.7);
+        }
+
+        .buttonDigit{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 40px;
+            padding-top: 20px;
+
+        }
+
+        .buttonDigit>input{
+            width: 250px;
+            padding: 15px;
+            box-shadow: 0 0 15px 5px rgba(251, 0, 240, 0.7);
+            font-size: 40px;
+        }
+
+        #operations{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        #operations>button{
+            width: 60px;
+            height: 60px;
+            background: #ffffff;
+            font-size: 50px;
+
+            border-radius: 50%;
+
+
+        }
+        #operations>button:hover{
+            background: #de69ff;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+        #calculate{
+            font-size: 25px;
+            box-shadow: 0 0 15px 5px rgba(251, 0, 240, 0.7);
+            padding: 10px 30px 10px 30px;
+            background: #f4ceff;
+        }
+        #calculate:hover{
+            background: #ffffff;
+        }
+
+        .result{
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+            background: rgba(253, 113, 246, 0.7);
+
+        }
+
+        .result>p{
+            font-size: 35px;
+            background: linear-gradient(to bottom, pink, rgba(220, 24, 210, 0.7));
+            padding: 30px 10px 30px 10px;
+            border-radius: 9px;
+            font-weight: 700;
+            border: 1px solid black;
+
+        }
+        #resultCalculate{
+            background-color: white;
+            padding: 10px 30px 10px 30px;
+            border-radius: 50%;
+            border: 1px solid black;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="position" >
+<div class="container">
+    <div class="h2Position">
+        <h2>КАЛЬКУЛЯТОР</h2>
+    </div>
+    <div class="buttonDigit">
+    <input id="digitInput1" type="text" placeholder="число">
+    <input id="digitInput2" type="text" placeholder="число">
+    </div>
+    <div id="operations">
+        <button class="operation-add" data-operation="add">+</button>
+        <button class="operation-sub" data-operation="subtract">-</button>
+        <button class="operation-multiple" data-operation="multiply">×</button>
+        <button class="operation-divide" data-operation="divide">÷</button>
+    </div>
+    <div class="btn">
+    <button id="calculate">Порахувати</button>
+    </div>
+    <div class="result">
+    <p>Результат: <b><span id="resultCalculate"></span></b></p>
+    </div>
+</div>
+</div>
+
+
+<script src="./script.js"></script>
+</body>
+</html>
